@@ -6,7 +6,7 @@ Simple Flask portfolio website created for Python Internship Task 6.   Includes 
 This project is created as part of **Python Internship – Task 6**.  
 The goal is to build a simple **Portfolio Website** using **Flask**, HTML, and CSS.
 
-## ?? Project Overview
+##  Project Overview
 The website includes:
 - Profile photo  
 - Name, role, and about section  
@@ -16,7 +16,7 @@ The website includes:
 - Resume download button  
 - CSS styling using static files  
 
-## ?? Folder Structure
+##  Folder Structure
 ```
 app.py
 templates/
@@ -28,7 +28,7 @@ static/
     resume.pdf
 ```
 
-## ?? How to Run
+##  How to Run
 1. Install Flask  
    `pip install flask`
 
@@ -38,7 +38,7 @@ static/
 3. Open in browser  
    `http://127.0.0.1:5000/`
 
-## ? Task Requirements Completed
+##  Task Requirements Completed
 - Flask routing  
 - HTML templates  
 - Contact form  
@@ -46,6 +46,5 @@ static/
 - Clean UI design  
 - GitHub-ready project  
 
-## ? Status  
-Task 6 completed successfully.
+
 
