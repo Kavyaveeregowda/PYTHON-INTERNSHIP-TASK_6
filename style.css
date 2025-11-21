@@ -1,0 +1,171 @@
+/* Global */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f5f7fb;
+    color: #222;
+}
+
+/* Navbar */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 40px;
+    background: #1f2933;
+    color: #fff;
+}
+
+.nav-title {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.nav-links a {
+    color: #e5e7eb;
+    margin-left: 16px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.nav-links a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* Layout */
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 16px 40px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+}
+
+section {
+    padding: 24px 20px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+section:last-of-type {
+    border-bottom: none;
+}
+
+/* Headings */
+h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+h2 {
+    margin-top: 4px;
+    font-size: 20px;
+    color: #2563eb;
+}
+
+h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #111827;
+}
+
+h4 {
+    margin: 0 0 6px;
+}
+
+/* About */
+.about-text {
+    margin: 12px 0 16px;
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background: #2563eb;
+    color: #ffffff;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #1d4ed8;
+}
+
+/* Skills as pills */
+.pill-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.pill-list li {
+    background: #e0ecff;
+    color: #1e40af;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 13px;
+}
+
+/* Projects */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 14px;
+}
+
+.card {
+    padding: 12px 14px;
+    background: #f9fafb;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+}
+
+/* Contact form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    gap: 6px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 7px;
+    border-radius: 5px;
+    border: 1px solid #d1d5db;
+    font-size: 14px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 12px 0 18px;
+    font-size: 12px;
+    color: #6b7280;
+}
+/* Profile Photo */
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 15px;
+    border: 3px solid #ddd;
+}

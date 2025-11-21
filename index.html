@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ portfolio.name }} - Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Navigation bar -->
+    <nav class="navbar">
+        <div class="nav-title">{{ portfolio.name }}</div>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Main content container -->
+    <div class="container">
+        <!-- Header / About -->
+        <section id="about">
+            <img src="{{ url_for('static', filename='profile.jpg') }}" class="profile-img">
+
+            <h1>{{ portfolio.name }}</h1>
+            <h2>{{ portfolio.role }}</h2>
+            <p class="about-text">{{ portfolio.about }}</p>
+
+            <!-- Extra feature: Resume button (optional) -->
+            <!-- Put your resume file as static/resume.pdf or change link -->
+            <a class="btn" href="{{ url_for('static', filename='resume.pdf') }}" target="_blank">
+                Download Resume
+            </a>
+        </section>
+
+        <!-- Skills -->
+        <section id="skills">
+            <h3>Skills</h3>
+            <ul class="pill-list">
+                {% for skill in portfolio.skills %}
+                    <li>{{ skill }}</li>
+                {% endfor %}
+            </ul>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects">
+            <h3>Projects</h3>
+            <div class="projects-grid">
+                {% for project in portfolio.projects %}
+                    <div class="card">
+                        <h4>{{ project.title }}</h4>
+                        <p>{{ project.desc }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+        </section>
+
+        <!-- Contact form -->
+        <section id="contact">
+            <h3>Contact Me</h3>
+            <form method="POST" class="contact-form">
+                <label>Name</label>
+                <input type="text" name="name" required>
+
+                <label>Email</label>
+                <input type="email" name="email" required>
+
+                <label>Message</label>
+                <textarea name="message" rows="4" required></textarea>
+
+                <button type="submit" class="btn">Send</button>
+            </form>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© {{ portfolio.name }} · {{ portfolio.role }}</p>
+    </footer>
+</body>
+</html>
